@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "numparse"
+version = "1.0.0"
+description = "Forgiving parser for loose numeric strings: '$1,234.56', '1.5k', '2 MiB', '1h30m', '12.5%'."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [{name = "Nripanka Das", email = "nripankadas@gmail.com"}]
+keywords = [
+    "number",
+    "parse",
+    "parser",
+    "humansize",
+    "bytes",
+    "duration",
+    "percent",
+    "currency",
+    "units",
+    "zero-dependency",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Text Processing",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov>=4"]
+
+[project.urls]
+Homepage = "https://github.com/nripankadas07/numparse"
+Repository = "https://github.com/nripankadas07/numparse"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+numparse = ["py.typed"]
